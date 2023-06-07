@@ -401,7 +401,7 @@ header .container-icon-cart:hover {
 #content-customer .content-info-item .overlay {
   position: relative;
   width: 100%;
-  background-image: url(/capstone2_hoangbao/assets/img/theme2.png);
+  background-image: url(/assets/img/theme2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
