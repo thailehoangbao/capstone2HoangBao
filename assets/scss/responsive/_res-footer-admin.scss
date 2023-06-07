@@ -9,6 +9,21 @@
                 }
             }
         }
+
+        .footer-body {
+            .footer__content {
+                div {
+                    p {
+                        line-height: 2rem !important;
+                        font-size: 1.1rem !important;
+                    }
+
+                    ul {
+                        padding-top: 0 !important;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -19,15 +34,19 @@
 
             .container {
                 padding: 0px !important;
+
                 .col-4 {
-                    padding: 0 8px!important;
+                    padding: 0 8px !important;
                 }
+
                 .col-2 {
-                    padding: 0 8px!important;
+                    padding: 0 8px !important;
                 }
+
                 .footer__content {
                     p {
-                        margin-bottom: 0!important;
+                        margin-bottom: 0 !important;
+
                         i {
                             padding-right: $pd-0 !important;
                         }
@@ -41,15 +60,44 @@
                         margin: 0 !important;
 
                         p {
-                            line-height: 1.4rem !important;
+                            line-height: 1.7rem !important;
                         }
+
                         ul {
-                            margin: 0!important;
+                            margin: 0 !important;
+
                             li {
-                                padding-bottom: 8px!important;
+                                padding-bottom: 8px !important;
+
                                 a {
-                                    font-size: $fs-0!important;
+                                    font-size: $fs-1 !important;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('small') {
+    footer {
+        .footer-body {
+            .container {
+                .footer__content {
+                    padding-left: $pd-3;
+                    .first__content{
+                        font-size: $fs-1 !important;
+                    }
+                    ul {
+                        margin: 0 !important;
+
+                        li {
+                            padding-bottom: 8px !important;
+
+                            a {
+                                font-size: $fs-1 !important;
                             }
                         }
                     }

@@ -1,10 +1,10 @@
 #content-customer {
     .content-info-item {
+        background-image: url(/assets/img/theme2.png);
+        @include fix-background();
         .overlay {
             position: relative;
             width: 100%;
-            background-image: url(/assets/img/theme2.png);
-            @include fix-background();
             height: 716px;
             object-fit: cover;
             padding-top: $pd-8;
@@ -39,7 +39,7 @@
                 }
             }
         }
-        &::after {
+        &::before {
             position: absolute;
             top: 19%;
             left: 0;

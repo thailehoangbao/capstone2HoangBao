@@ -398,13 +398,15 @@ header .container-icon-cart:hover {
   animation: zoom-in 0.2s linear forwards;
 }
 
-#content-customer .content-info-item .overlay {
-  position: relative;
-  width: 100%;
+#content-customer .content-info-item {
   background-image: url(/assets/img/theme2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#content-customer .content-info-item .overlay {
+  position: relative;
+  width: 100%;
   height: 716px;
   object-fit: cover;
   padding-top: 180px;
@@ -444,7 +446,7 @@ header .container-icon-cart:hover {
   font-weight: 500;
   color: #f5f9fe;
 }
-#content-customer .content-info-item::after {
+#content-customer .content-info-item::before {
   position: absolute;
   top: 19%;
   left: 0;

@@ -57,6 +57,13 @@
   footer .footer-top h1 a i {
     padding: 0 12px !important;
   }
+  footer .footer-body .footer__content div p {
+    line-height: 2rem !important;
+    font-size: 1.1rem !important;
+  }
+  footer .footer-body .footer__content div ul {
+    padding-top: 0 !important;
+  }
 }
 @media (max-width: 768px) {
   footer .footer-body {
@@ -84,7 +91,7 @@
     margin: 0 !important;
   }
   footer .footer-body .container .footer__content div p {
-    line-height: 1.4rem !important;
+    line-height: 1.7rem !important;
   }
   footer .footer-body .container .footer__content div ul {
     margin: 0 !important;
@@ -93,7 +100,24 @@
     padding-bottom: 8px !important;
   }
   footer .footer-body .container .footer__content div ul li a {
-    font-size: 0.9rem !important;
+    font-size: 1.1rem !important;
+  }
+}
+@media (max-width: 576px) {
+  footer .footer-body .container .footer__content {
+    padding-left: 48px;
+  }
+  footer .footer-body .container .footer__content .first__content {
+    font-size: 1.1rem !important;
+  }
+  footer .footer-body .container .footer__content ul {
+    margin: 0 !important;
+  }
+  footer .footer-body .container .footer__content ul li {
+    padding-bottom: 8px !important;
+  }
+  footer .footer-body .container .footer__content ul li a {
+    font-size: 1.1rem !important;
   }
 }
 .modal-success {

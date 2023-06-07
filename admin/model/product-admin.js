@@ -8,4 +8,4 @@ function Product(id,tenSP,gia,manghinh,backCamera,frontCamera,hinhAnh,moTa,type)
     this.img = hinhAnh;
     this.desc = moTa;
     this.type = type;
-}
+};
