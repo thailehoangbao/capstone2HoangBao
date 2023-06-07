@@ -1,0 +1,8 @@
+.sticky {
+
+}
+.fixed {
+    position: fixed;
+    background-color: #222222;
+    transition: all 0.95s;
+}

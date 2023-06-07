@@ -1,0 +1,67 @@
+header {
+    position: fixed;
+    z-index: 10;
+    top:0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.85);
+    .navbar {
+        padding: $pd-0 0;
+        .navbar-brand {
+            span {
+                @include text-style($fs-2,0,$color-white-1);
+            }
+            .fa-apple {
+                @include text-style($fs-3,$fw-2,$color-white-1);
+                padding-right: $pd-1;
+            }
+        }
+        .nav-right {
+            user-select: none;
+            list-style: none;
+            transform: all 0.3s;
+            i {
+                transition: all 0.3s;
+                &:hover {
+                    color: $color-yellow-1;
+                    cursor: pointer;
+                }
+            }
+            &:hover {
+                color: $color-yellow-1;
+                cursor: pointer;
+            }
+            li {
+                .icon-cart-admin {
+                    i{
+                        font-size: $fs-2;
+                    }
+                }
+            }
+        }
+        #navbarNav{
+            padding-left: $pd-5;
+            .nav-item {
+                div {
+                    text-align: center;
+                    color: $color-white-1;
+                    font-size: $fs-2;
+                }
+                a {
+                    @include text-style($fs-1,0,$color-white-1);
+                    margin: 0 $mg-2;
+                    padding: 0;
+                    transition: all 0.3s;
+                    i {
+                        transition: all 0.3s;
+                        &:hover {
+                            color: $color-yellow-1;
+                        }
+                    }
+                    &:hover {
+                        color: $color-yellow-1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@include responsive('large') {
+    footer {
+        .footer-top {
+            h1 {
+                a {
+                    i {
+                        padding: 0 12px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive('medium') {
+    footer {
+        .footer-body {
+            padding: $pd-2 0 !important;
+
+            .container {
+                padding: 0px !important;
+                .col-4 {
+                    padding: 0 8px!important;
+                }
+                .col-2 {
+                    padding: 0 8px!important;
+                }
+                .footer__content {
+                    p {
+                        margin-bottom: 0!important;
+                        i {
+                            padding-right: $pd-0 !important;
+                        }
+
+                        span {
+                            font-size: $fs-0 !important;
+                        }
+                    }
+
+                    div {
+                        margin: 0 !important;
+
+                        p {
+                            line-height: 1.4rem !important;
+                        }
+                        ul {
+                            margin: 0!important;
+                            li {
+                                padding-bottom: 8px!important;
+                                a {
+                                    font-size: $fs-0!important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

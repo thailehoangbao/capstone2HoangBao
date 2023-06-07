@@ -1,0 +1,94 @@
+.cart-shopping-logo {
+    position: relative;
+
+    #cart-box-id {
+        background-color: $color-white-1;
+        position: absolute;
+        width: 500px;
+        height: fit-content;
+        right: -70px;
+        top: 70%;
+        border: 1px solid $color-dark-3;
+        border-radius: $bd-2;
+        transform: translateX(700px);
+        opacity: 0;
+        h1 {
+            padding-top: $pd-1;
+            @include text-style($fs-2, $fw-2, $color-blue-1);
+        }
+
+        p {
+            @include text-style($fs-0, $fw-1, $color-dark-3);
+        }
+
+        .cart-info {
+            // overflow: auto;
+            height: 220px;
+            overflow-y: auto;
+            @media screen and (max-height: 220px) {
+                overflow-y: hidden;
+                height: 0px;
+            }
+
+            #removeCart {
+                color: $color-yellow-1;
+                font-size: $fs-1;
+                text-decoration: underline;
+            }
+
+            .cart-img {
+                height: 180px;
+            }
+        }
+
+        .button-quality-group {
+            display: flex;
+            align-items: center;
+
+            span {
+                display: inline-block;
+                @include display-flex-center(center, center);
+                @include text-style($fs-1, $fw-3, $color-blue-1);
+                margin: 0 $mg-0;
+
+                &:first-child {
+                    margin-left: $mg-4;
+                }
+
+                ;
+            }
+
+            button {
+                @include display-flex-center(center, center);
+                background-color: $color-blue-1;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                color: $color-white-1;
+                outline: none;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        #resultQuality {
+            @include text-style($fs-2, $fw-3, $color-blue-1);
+
+        }
+
+        .cart-footer {
+            p {
+                margin-bottom: 0;
+                ;
+            }
+
+            h5 {
+                margin-left: $mg-3;
+                @include text-style($fs-0, $fw-1, $color-dark-2);
+            }
+        }
+    }
+}

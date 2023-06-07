@@ -1,0 +1,109 @@
+.list-item {
+    .card-item {
+        position: relative;
+        border-radius: $pd-1;
+        overflow: hidden;
+        box-shadow: 0px 0px 16px rgba(24, 82, 149, 0.4);
+        transform: all 0.5s;
+        transform: scale(1,1);
+        max-height: fit-content;
+        img {
+            margin-top: $pd-1;
+            height: 250px;
+        }
+        .card-body {
+            .card-title {
+                @include text-style($fs-1,$fw-3,$color-blue-2);
+            }
+            .card-info {
+                width: 50px;
+                height: 50px;
+                background-color: $color-blue-2;
+                padding: 2px 8px;
+                border-radius: $bd-1;
+                color: $color-white-1;
+            }
+            .card-desc {
+                @include text-style($fs-0,$fw-3,$color-dark-2);
+            }
+            .card-star {
+                i {
+                    color: $color-yellow-1;
+                }
+                a {
+                    display: inline-block;
+                    margin-left: $mg-2;
+                    color: rgb(80, 132, 3);
+                }
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        &:hover::before {
+            cursor: pointer;
+            opacity: 1;
+        }
+        &:hover {
+            transition: all 0.5s;
+            transform: scale(1.1, 1.1); 
+            box-shadow: 0px 0px 36px rgb(4, 38, 75);
+            border: transparent;
+        }
+        .content-card {
+            position: absolute;
+            top: -20%;
+            color: $color-white-1;
+            padding: $pd-0;
+            opacity: 0;
+            h1 {
+                padding-bottom: $pd-3;
+            }
+            #fontCamera {
+                padding-bottom: $pd-3;
+            }
+            .detail-card {
+                text-align: center;
+                text-decoration: underline;
+                color: $color-white-1;
+                display: inline-block;
+            }
+        }
+        .btnAddCard {
+            position: absolute;
+            bottom: -20%;
+            left: 25%;
+            #btnAddCart {
+                width: 120px;
+                height: 48px;
+                border-radius: $pd-0;
+                color: $color-white-1;
+                background-color: #f0a416;
+                border: 1px solid transparent;
+                font-weight: 500;
+                transition: all 0.3s;
+                &:hover {
+                    color: $color-dark-2;
+                    opacity: 0.75;
+                }
+            }    
+        }
+        &:hover .btnAddCard {
+            bottom: 5%;
+            transition: all ease-in-out 0.5s;
+            cursor: pointer;
+        }
+        &:hover .content-card{
+            opacity: 1;
+            transition: all ease-in-out 0.5s;
+            top:0;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+#content-customer {
+    .content-info-item {
+        .overlay {
+            position: relative;
+            width: 100%;
+            background-image: url(/capstone2_hoangbao/assets/img/theme2.png);
+            @include fix-background();
+            height: 716px;
+            object-fit: cover;
+            padding-top: $pd-8;
+            // filter: grayscale(50%) contrast(50%);
+            .img__container {
+                width: 100%;
+                height: 100%;
+                img {
+                    border-radius: $bd-5;
+                    height: 500px;
+                };
+            };
+            .content-left {
+                h1 {
+                    @include text-style ($fs-4,$fw-2,$color-white-2);
+                }
+                div {
+                    padding: $pd-2 0;
+                    i {
+                        @include text-style($fs-1,defauft,$color-white-1);
+                        transition: all 0.3s;
+                        &:hover {
+                            color: $color-yellow-1;
+                        }
+                    }
+                }
+                p {
+                    &:last-of-type{
+                        @include text-style($fs-3,$fw-2,$color-white-1);
+                    }
+                    @include text-style ($fs-1,$fw-2,$color-white-1);
+                }
+            }
+        }
+        &::after {
+            position: absolute;
+            top: 19%;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #33333324;
+        }
+    }
+    .content-list-item {
+        padding: $pd-7 0;    
+    }
+};

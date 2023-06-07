@@ -1,0 +1,32 @@
+@include responsive('medium') {
+    .navbar {
+        .navbar-brand {
+            margin-right: 0px;
+            span {
+                font-size: $fs-2!important;
+            }
+            .fa-apple {
+                font-size: $fs-2!important;
+            }
+
+            i {
+                padding-right: 12px !important;
+            }
+        }
+
+        #navbarNav {
+            .nav-right {
+                li {
+                    span {
+                        right: 4%;
+                    }
+                }
+            }
+            .nav-item {
+                div {
+                    font-size: $fs-1!important;
+                }
+            }
+        }
+    }
+}

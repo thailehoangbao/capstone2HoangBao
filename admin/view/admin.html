@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>AdminPage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awe  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS Admin  -->
+    <link rel="stylesheet" href="../../assets/css/styleAdmin.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- navbar-expand-lg -->
+        <nav class="navbar navbar-expand">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-brands fa-apple"></i>
+                    <span>
+                        Express Store
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-left mr-sm-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../../index.html">
+                                <div>
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../customer/view/store.html">
+                                <div>
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                Store
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right mb-0">
+                        <li class="nav-item nav-item-cart">
+                            <div>
+                                <a class="icon-cart-admin" href="/customer/view/store.html">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </div>
+                            <a class="nav-link" href="/customer/view/store.html">
+                                Cart
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <section id="content-phone" class="mt-5">
+        <div class="container p-0">
+            <div role="tabpanel" class="tab-pane  in active" id="DanhSachSP">
+                <div class="input-group mb-3 w-50 ml-auto input-section">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Search</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="iphone 11 ..." aria-label=""
+                        aria-describedby="basic-addon1" id="searchItem">
+                </div>
+                <div class="row top-list">
+                    <div class="col-md-10">
+                        <p class="status-heading">
+                            Your List Phone
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <!-- BEGIN BUTTOM THÊM MỚI -->
+                        <button id="btnThemSP" class="btn btn-outline-success text-white" data-toggle="modal"
+                            data-target="#myModal">
+                            <i class="fa fa-plus mr-1"></i>
+                            Add Phone
+                        </button>
+                        <!-- END BUTTON THÊM MỚI -->
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+                <div class="tblSanPham" id="tblSanPham">
+                    <!-- BEGIN TABLE SẢN PHẨM -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>STT</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th class="d-flex icon-up-down">
+                                <div class="mr-3 th-price">
+                                    Giá
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up" id="upPrice"></i>
+                                    <i class="fa-sharp fa-solid fa-arrow-down" id="downPrice"></i>
+                                </div>
+                            </th>
+                            <th>Hình Ảnh</th>
+                            <th>Mô Tả</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody id="tblDanhSachSP">
+
+                        </tbody>
+                    </table>
+                    <!-- END TABLE SẢN PHẨM -->
+                </div>
+                <br />
+            </div>
+        </div>
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title text-center text-center">Infomation Your Phone</h4>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"><i class="fa-solid fa-square-phone"></i></label>
+                                <input id="TenSP" class="form-control" placeholder="Phone Name" />
+                            </div>
+                            <div>
+                                <p id="errorTenSP" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text">$</label>
+                                <input id="GiaSP" class="form-control" placeholder="Price" />
+                            </div>
+                            <div>
+                                <p id="errorGiaSP" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"><i class="fa-solid fa-square-phone"></i></label>
+                                <input id="ScreenSP" class="form-control" placeholder="Screen-phone" />
+                            </div>
+                            <div>
+                                <p id="errorScreenSP" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"><i class="fa-solid fa-camera"></i></label>
+                                <input id="backCamera" class="form-control" placeholder="Back Camera" />
+                            </div>
+                            <div>
+                                <p id="errorbackCamera" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"><i class="fa-solid fa-camera"></i></label>
+                                <input id="fontCamera" class="form-control" placeholder="Font Camera" />
+                            </div>
+                            <div>
+                                <p id="errorfontCamera" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"><i class="fa-solid fa-image"></i></label>
+                                <input id="imgPhone" class="form-control" placeholder="url img" />
+                            </div>
+                            <div>
+                                <p id="errorimgPhone" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"><i class="fa-sharp fa-solid fa-comment"></i></label>
+                                <input id="DescSP" class="form-control" placeholder="Description" />
+                            </div>
+                            <div>
+                                <p id="errorDescSP" class="isvalid"
+                                    style="color: red; font-size: 0.85rem;display: none;"></p>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="inputGroupSelect01"><i
+                                                class="fa-solid fa-pen-to-square"></i>
+                                        </label>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Select Brand</option>
+                                            <option value="1">iphone</option>
+                                            <option value="2">Samsung</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p id="errorSelect01" class="isvalid p-0"
+                                        style="color: red; font-size: 0.85rem;display: none;"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <!-- data-target="#exampleModal" -->
+                        <!-- data-toggle="modal" -->
+                        <button class="btn btn-outline-warning" id="btnAdd">Add Phone</button>
+                        <button id="btn-close-addPhone" type="button"
+                            class="btn btn-outline-danger close-item click-close" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <div class="container-lg">
+                <h1 class="text-center">
+                    <span>
+                        Get connected with us on ours social networks:
+                    </span>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </h1>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="footer-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="footer__content">
+                            <p>
+                                <i class="fa-brands fa-apple"></i>
+                                <span>
+                                    EXPRESS STORE
+                                </span>
+                            </p>
+                            <div>
+                                <p>We pride ourselves on our efficiency and hard work, but most of all our ability to
+                                    source you the best quality and best value products and devices in the market.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="footer__content">
+                            <p>
+                                <span>
+                                    BRANDS
+                                </span>
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Iphone
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Samsung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Xiaomi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Oppo
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="footer__content">
+                            <p>
+                                <span>
+                                    USEFUL LINKS
+                                </span>
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Pricing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Orders
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Help
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer__content">
+                            <p>
+                                <span>
+                                    CONTACT
+                                </span>
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-house"></i>
+                                            Ho Chi Minh City VN
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            expressstore@gmail.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-phone"></i>
+                                            +89 123 456 78
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-fax"></i>
+                                            +89 123 456 78
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <span>
+                © 2022 Copyright
+            </span>
+            <a href="#">
+                Cyber Phone
+            </a>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body modal-success-body">
+                    <div class="around-container">
+                        <i class="fa-solid fa-check"></i>
+                        <p>Success</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mb-3" id="click-close"
+                        data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- axios  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+        integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- api js  -->
+    <script src="../../admin/services/api-admin.js"></script>
+    <!-- validation js  -->
+    <script src="../controller/validation-admin.js"></script>
+    <!-- product js  -->
+    <script src="../../admin/model/product-admin.js"></script>
+    <!-- controllers admin js  -->
+    <script src="../controller/controllers-admin.js"></script>
+    <!-- main js admin  -->
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

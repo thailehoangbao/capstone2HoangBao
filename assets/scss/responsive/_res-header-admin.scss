@@ -1,0 +1,28 @@
+.navbar {
+    @include responsive('medium') {
+        #navbarNav {
+            padding-left: 0px !important;
+
+            ul {
+                li {
+                    a {
+                        padding: 0px 0px !important;
+                        margin: 0px 8px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive('small') {
+        #navbarNav {
+            justify-content: center;
+            .nav-item-cart {
+                padding: 0 0 0 $pd-2;
+            }
+        }
+        .navbar-brand {
+            margin: 0 0 0 $pd-2;
+        }
+    }
+}

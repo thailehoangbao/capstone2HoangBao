@@ -1,0 +1,92 @@
+@keyframes cart-box-action {
+    from {
+        
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cart-box-action-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(700px);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        zoom:0.8;
+    }
+    10% {
+        zoom:0.82;
+    }
+    20% {
+        zoom:0.84;
+    }
+    30% {
+        zoom:0.86;
+    }
+    40% {
+        zoom:0.88;
+    }
+    50% {
+        zoom: 0.9;
+    }
+    60% {
+        zoom: 0.92;
+    }
+    70% {
+        zoom:0.94;
+    } 
+    80% {
+        zoom:0.96;
+    }
+    90% {
+        zoom:0.98;
+    }
+    100% {
+        zoom: 1;
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        zoom:1;
+    }
+    10% {
+        zoom:0.98;
+    }
+    20% {
+        zoom:0.96;
+    }
+    30% {
+        zoom:0.94;
+    }
+    40% {
+        zoom:0.92;
+    }
+    50% {
+        zoom: 0.9;
+    }
+    60% {
+        zoom: 0.88;
+    }
+    70% {
+        zoom:0.86;
+    } 
+    80% {
+        zoom:0.84;
+    }
+    90% {
+        zoom:0.82;
+    }
+    100% {
+        zoom: 0.8;
+    }
+}

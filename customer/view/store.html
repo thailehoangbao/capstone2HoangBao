@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CustomerPage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awe  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Modal CSS  -->
+    <link rel="stylesheet" href="./css/modal-customer.css">
+    <!-- CSS Admin  -->
+    <link rel="stylesheet" href="../../assets/css/styleAdmin.css">
+    <!-- CSS Customer  -->
+    <link rel="stylesheet" href="../../assets/css/styleCustomer.css">
+</head>
+
+<body>
+    <header class="sticky">
+        <nav class="navbar navbar-expand">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fa-brands fa-apple"></i>
+                    <span>
+                        Apple Store
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-left mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../../index.html">
+                                <div>
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../admin/view/admin.html">
+                                <div>
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                Admin Protal
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right mb-0">
+                        <li class="nav-item cart-shopping-logo">
+                            <div class="container-icon-cart">
+                                <i class="fa-solid fa-cart-shopping" id="cart-box-icon"></i>
+                                <span id="amountItem">0</span>
+                                <a class="nav-link" href="#">Cart</a>
+                            </div>
+                            <div class="cart-box" id="cart-box-id">
+                                <h1>Shopping Cart</h1>
+                                <p>An overview of your selected products.</p>
+                                <div class="cart-info" id="resultCartItem">
+                                    <!-- <div class="row">
+                                        <div class="col-sm-6 pr-0">
+                                            <img src="./img/samsungs23-ultra.webp" class="img-fluid cart-img" alt="">
+                                        </div>
+                                        <div class="col-sm-6 pl-0">
+                                            <p class="mt-2">Iphone1</p>
+                                            <p>Back Camera: </p>
+                                            <p class="mb-0">Font Camera: </p>
+                                            <a href="#" id="removeCart">Remove</a>
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="row">
+                                        <div class='col-sm-8 p-0 button-quality-group'>
+                                            <Span>Quality:</Span>
+                                            <button id="subtract">-</button>
+                                            <span id="number1">1</span>
+                                            <button id="plus">+</button>
+                                        </div>
+                                        <div class="col-sm-4 p-0">
+                                            <span id="resultQuality">$1500</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="row cart-footer m-0">
+                                    <div class="col-sm-4 p-0">
+                                        <p>Subtotal </p>
+                                        <p>Shipping (estimated) </p>
+                                        <p>Tax (estimated)</p>
+                                        <p>Total</p>
+                                    </div>
+                                    <div class="col-sm-4 p-0">
+                                        <p id="Subtotal"></p>
+                                        <p id="Shipping"></p>
+                                        <p id="Tax"></p>
+                                        <p id='Total'></p>
+                                    </div>
+                                    <h5 class="mb-0">Estimations based on New York, United States</h5>
+                                </div>
+                                <div class="button-cart mb-3 mt-1 mt-0">
+                                    <button id="continueShop" class="cart-button"
+                                        style="background-color: #03225b;">Continue Shopping</button>
+                                    <button id="emptyCart" class="cart-button" style="background-color: #e10e0e;"> <i
+                                            class="fa-solid fa-trash"></i>Empty Cart</button>
+                                    <button id="payNow" class="cart-button" style="background-color: #e8892a;"
+                                        data-target="#exampleModal" data-toggle="modal">Pay
+                                        Now</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="content-customer">
+        <div class="content-info-item">
+            <div class="overlay">
+                <div class="container p-0">
+                    <div class="row">
+                        <div class="col-6 p-0 pl-md-3">
+                            <div class="content-left">
+                                <h1>Galaxy S23｜S23 Ultra</h1>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p>
+                                    Get select Galaxy Buds2 or Buds Live on us with Galaxy S22+. Plus, get up to $700
+                                    enhanced trade-in credit. For a limited time. Get hands on with the S22 and S22+.
+                                    See in
+                                    AR >>
+                                </p>
+                                <p>
+                                    1325$
+                                </p>
+                                <div>
+                                    <a href="#">
+                                        <button class="customer-btn-content"><i class="fa-solid fa-play"></i>Find Out
+                                            More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 p-0 pr-md-3 pl-sm-3">
+                            <div class="img__container">
+                                <img src="../../assets/img/samsung-galaxy-s23-5.png" alt="samsungs23-ultra"
+                                    class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-list-item">
+            <div class="container p-0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Option Phone</label>
+                            </div>
+                            <select class="custom-select" id="dropdown-menu-phone">
+                                <!-- <option selected>All Brands</option> -->
+                                <option value="1">All Brands</option>
+                                <option value="2">Iphone</option>
+                                <option value="3">Samsung</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item mt-5">
+                    <div class="row" id="contentItemPhone">
+                        <!--<div class="col-md-3">
+                            <div class="card card-item">
+                                <img class="card-img-top img-fluid" src="./img/store2.jpg" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title" id="nameSP">iphone</h4>
+                                    <p class="card-text" id="priceSP">$1500 <span id="saleOff-Price" style="text-decoration: line-through; color: red;">$1800</span></p>
+                                    <span class="card-info" id="typeSP">Apple</span>
+                                    <p class="mt-2 card-desc">Description:<span id="descSP"></span></p>
+                                    <div class="card-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <a href="#">In Stock</a>
+                                    </div>
+                                </div>
+                                <div class="content-card">
+                                    <h1 class="heading-info-card">Specification</h1>
+                                    <p id="screenSP">Screen:</p>
+                                    <p id='backCamera'>Back Camera: </p>
+                                    <p id="fontCamera">Font Camera: </p>
+                                    <a href="#" class="detail-card">Click here for more detail</a>
+                                </div>
+                                <div class="btnAddCard">
+                                    <button class="btn btn-outline-info" id="btnAddCart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <h1 class="text-center">
+                <span>
+                    Get connected with us on ours social networks:
+                </span>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </h1>
+        </div>
+        <div class="line"></div>
+        <div class="footer-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="footer__content">
+                            <p>
+                                <i class="fa-brands fa-apple"></i>
+                                <span>
+                                    EXPRESS STORE
+                                </span>
+                            </p>
+                            <div>
+                                <p>We pride ourselves on our efficiency and hard work, but most of all our ability to
+                                    source you the best quality and best value products and devices in the market.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="footer__content">
+                            <p>
+                                <span>
+                                    BRANDS
+                                </span>
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Iphone
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Samsung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Xiaomi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Oppo
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="footer__content">
+                            <p>
+                                <span>
+                                    USEFUL LINKS
+                                </span>
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Pricing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Orders
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Help
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer__content">
+                            <p>
+                                <span>
+                                    CONTACT
+                                </span>
+                            </p>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-house"></i>
+                                            Ho Chi Minh City VN
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            expressstore@gmail.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-phone"></i>
+                                            +89 123 456 78
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-fax"></i>
+                                            +89 123 456 78
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <span>
+                © 2022 Copyright
+            </span>
+            <a href="#">
+                Cyber Phone
+            </a>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body modal-success-body">
+                    <div class="around-container ">
+                        <p id="alert__icon__container">
+                            <i class="fa-solid fa-check" id="alert__icon"></i>
+                        </p>
+                        <p id="alert">Success</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mb-3" id="click-close"
+                        data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- axios  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+        integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- cart-box-action  -->
+    <script src="../model/cart-box-action.js"></script>
+    <!-- modal js  -->
+    <script src="../model/modal.js"></script>
+    <!-- cart item  -->
+    <script src="../model/cartItem.js"></script>
+    <!-- cart js  -->
+    <script src="../model/cart.js"></script>
+    <!-- controller customer js  -->
+    <script src="../controller/controller-customer.js"></script>
+    <!-- customer js  -->
+    <script src="../js/customer.js"></script>
+</body>
+
+</html>

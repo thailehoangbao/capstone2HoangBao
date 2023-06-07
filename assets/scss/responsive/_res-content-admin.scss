@@ -1,0 +1,28 @@
+#content-phone {
+    @include responsive('small') {
+        #DanhSachSP {
+            padding: 0px $pd-0 0 $pd-0;
+            .input-section {
+                padding-right: $pd-2;
+            }
+            #tblSanPham {
+                .table {
+                    thead {
+                        tr {
+                            th {
+                                text-align: center;
+                                padding: 4px 8px 4px 8px;
+                                font-size: 0.85rem;
+                                .th-price {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

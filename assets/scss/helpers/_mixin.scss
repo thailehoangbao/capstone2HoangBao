@@ -1,0 +1,47 @@
+@mixin text-style ($fs, $fw, $color) {
+    font-size: $fs ;
+    font-weight: $fw ;
+    color: $color;
+}
+
+@mixin background-style ($bgcolor) {
+    background-color: $bgcolor;
+}
+
+@mixin background-img ($bgimg) {
+    background-image: $bgimg;
+}
+
+@mixin display-flex-center($jtf, $align) {
+    display: flex;
+    justify-content: $jtf;
+    align-items: $align;
+}
+
+@mixin fix-background() {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin hover-icon-1 () {
+    animation: zoom-in 0.2s linear forwards;
+}
+
+@mixin hover-icon-2 () {
+    animation: zoom-out 0.2s linear forwards;
+}
+
+@mixin responsive($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        @media (max-width: $breakpoint-value) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Breakpoint '#{$breakpoint}' does not exist.";
+    }
+}

@@ -1,0 +1,30 @@
+#content-phone {
+    padding-top: $pd-8;
+    #DanhSachSP {
+        .top-list {
+            margin-right: 0;
+            margin-left: 0;
+            @include background-style ($color-blue-1);
+            border-top-left-radius: $bd-3;
+            border-top-right-radius: $bd-3;
+            padding: $pd-1 $pd-0 0 $pd-0;
+            .status-heading {
+                @include text-style ($fs-2,$fw-2,$color-white-1)
+            }
+        }
+        #tblSanPham {
+            .icon-up-down {
+                i { 
+                    display: inline-block;
+                    font-size: $fs-1;
+                    color: $color-blue-2;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $color-yellow-1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

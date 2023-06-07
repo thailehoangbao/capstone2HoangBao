@@ -1,0 +1,37 @@
+@include responsive ('large') {
+    #content-customer {
+        .content-info-item{
+            .overlay{
+                padding-top: $pd-7!important;
+            }
+        }
+        .content-list-item {
+            padding-top: $pd-3!important;
+        }
+    }
+}
+
+@include responsive ('medium') {
+    #content-customer {
+        .content-info-item{
+            .overlay{
+                padding-top: $pd-6!important;
+                .content-left {
+                    h1 {
+                        font-size: $fs-3!important;
+                    }
+                    div {
+                        padding: $pd-0!important;
+                    }
+                    p {
+                        font-size: 1rem!important;
+                        &:last-of-type {
+                            font-size: $fs-2!important;
+                            margin-bottom: $mg-0!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

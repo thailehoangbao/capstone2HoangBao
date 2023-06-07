@@ -1,0 +1,85 @@
+//color
+$color-white-1: #f5f9fe;
+$color-white-2: #e2ebfc;
+$color-white-3: #fff;
+$color-blue-1: #1d365e;
+$color-blue-2: #2a73dd;
+$color-blue-3: #c9d8f4;
+$color-yellow-1: #f9d412;
+
+//dark color
+$color-dark-1: #656774;
+$color-dark-2:#121212;
+$color-dark-3:#353536;
+$color-dark-4:#212121;
+$color-blue-4:#2196f3;
+
+//color background main
+$color-bg-footer: linear-gradient(to bottom, #02045e 10%, #2f0364 40%, #720236 100%);
+
+
+
+//font size
+$fs-0: 0.9rem;
+$fs-1: 1.1rem;
+$fs-2: 1.8rem;
+$fs-3: 2.4rem;
+$fs-4: 3rem;
+$fs-5: 4rem;
+$fs-6: 5rem;
+$fs-7: 6rem;
+$fs-8: 7rem;
+
+//font weight
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 700;
+
+//letter spacing
+$ls-1: 0.015rem;
+$ls-2: 0.03rem;
+
+//Padding
+$pd-0: 16px;
+$pd-1: 24px;
+$pd-2: 36px;
+$pd-3: 48px;
+$pd-4: 64px;
+$pd-5: 80px;
+$pd-6: 120px;
+$pd-7: 150px;
+$pd-8: 180px;
+
+//Margin
+$mg-0: 12px;
+$mg-1: 24px;
+$mg-2: 36px;
+$mg-3: 48px;
+$mg-4: 64px;
+$mg-5: 80px;
+$mg-6: 120px;
+$mg-7: 150px;
+$mg-8: 180px;
+
+//border
+$bd-1: 2px;
+$bd-2: 8px;
+$bd-3: 16px;
+$bd-4: 18px;
+$bd-5: 32px;
+
+//button
+$btn-1: #ef2424;
+
+//break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    
+    "extra-large-down": 1199.98px,
+    "large-down": 991.98px,
+    "medium-down": 767.98px,
+    "small-down": 575.98px,
+);

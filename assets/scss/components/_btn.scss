@@ -1,0 +1,26 @@
+.customer-btn-content {
+    font-size: $fs-1;
+    color: $color-white-1;
+    padding: $pd-0 $pd-1;
+    background-color: $btn-1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.2s;
+    i {
+        padding-right: $pd-0;
+    }
+    border-radius: $bd-1;
+    &:hover {
+        opacity: 0.85;
+    }
+}
+.cart-button {
+    @include text-style($fs-1,$fw-1,$color-white-1);
+    border-radius: $bd-1;
+    border: 1px solid transparent;
+    padding: 12px 18px;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.6;
+        color: $color-yellow-1;
+    }
+}
