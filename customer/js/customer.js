@@ -153,7 +153,7 @@ function getLocalStorage(list) {
         var dataTongItems = localStorage.getItem("dataTongItems");
 
         //convert String => Json
-        let arrDataString= JSON.parse(dataString);
+        let arrDataString = JSON.parse(dataString);
         let tongItems = JSON.parse(dataTongItems);
         let updateDataString = arrDataString.map((data,index) => {
             let newDataString = new CartItem(data.id, data.name, data.price, data.screen, data.backCamera, data.frontCamera, data.img, data.desc, data.type ,data.quality,data.sumTotal);
@@ -193,7 +193,7 @@ domID('payNow').onclick = function (e) {
         document.querySelector('#Total').innerHTML = ``;
         domID('continueShop').click();
         setLocalStorage(listCart.arrCart,listCart.tongItem);
-    } else {
+    } else if ( listCart.arrCart.length === 0 ) {
         domID('alert').innerHTML = 'Empty Error';
         domID('alert').style.fontSize = '2rem';
         domID('alert__icon').parentNode.removeChild(domID('alert__icon'));
